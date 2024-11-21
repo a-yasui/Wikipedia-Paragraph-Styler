@@ -6,7 +6,22 @@ window.addEventListener("DOMContentLoaded", () => {
 // 字下げスタイルを適用する関数
 function applyIndent() {
   document.querySelectorAll("p").forEach((paragraph) => {
+    // 参考: https://lopan.jp/paragraph/
+
+    // 字下げ
     paragraph.style.textIndent = "1em";
+
+    // 両端揃え
+    paragraph.style.textAlign = 'justify';
+
+    // 字詰め
+    paragraph.style.fontFeatureSettings = '"pkna" 1';
+
+    // 禁則処理は厳しめ
+    paragraph.style.lineBreak = 'strict';
+
+    // ぶら下がりはあり
+    paragraph.style.hangingPunctuation = '"last" "allow-end"';
   });
 }
 
