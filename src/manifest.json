@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Wikipedia Paragraph Styler",
+  "version": "1.1.2",
+  "description": "Wikipedia の段落スタイルを変更します。",
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.wikipedia.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://*.wikipedia.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

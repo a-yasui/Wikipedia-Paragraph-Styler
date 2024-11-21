@@ -1,0 +1,36 @@
+# Node.js関連（package.jsonを使用している場合）
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# WebpackやViteなどでビルドした場合の出力ディレクトリ
+dist/
+build/
+
+# Chrome拡張機能の一時的な動作環境
+*.crx
+*.pem
+
+# IDE/エディタの設定や一時ファイル
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.DS_Store
+Thumbs.db
+
+# OSのゴミ箱ファイル
+.DS_Store
+
+# ログファイル
+*.log
+
+# Chromeのデバッグ情報
+*.localstorage
+*.lock
+
+# TypeScriptの場合のビルド成果物
+*.js
+*.js.map
+*.d.ts
