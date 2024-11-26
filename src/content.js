@@ -1,10 +1,7 @@
-// ページロード時に自動で字下げ
-window.addEventListener("DOMContentLoaded", () => {
-  applyIndent();
-});
 
 // 字下げスタイルを適用する関数
 function applyIndent() {
+  console.log("applyIndent");
   document.querySelectorAll("p").forEach((paragraph) => {
     // 参考: https://lopan.jp/paragraph/
 
@@ -45,3 +42,10 @@ chrome.runtime.onMessage.addListener((message) => {
     });
   }
 });
+
+// ページロード時に自動で字下げ
+if(document.readyState !== 'complete') {
+  window.addEventListener('load',applyIndent);
+} else {
+  applyIndent();
+}
